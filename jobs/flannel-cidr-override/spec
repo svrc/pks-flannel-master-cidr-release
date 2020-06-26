@@ -1,0 +1,12 @@
+---
+name: flannel-cidr-override
+
+templates:
+  bin/pre-start.erb: bin/pre-start
+
+packages: []
+
+properties: 
+  pod-network-cidr:
+    description: The pod networking cidr for pod network overlay
+    default: "10.244.0.0/16"

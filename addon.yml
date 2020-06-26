@@ -1,0 +1,20 @@
+---
+name: pks-flannel-master-cidr
+
+releases:
+- name: pks-flannel-cidr
+  version: 0+dev.1
+
+addons:
+  - name: flannel-cidr-override
+    jobs:
+    - name: flannel-cidr-override
+      release: pks-flannel-master-cidr
+
+    include: 
+      jobs:
+      - name: kube-controller-manager
+        release: kubo
+
+      stemcell:
+      - os: ubuntu-xenial

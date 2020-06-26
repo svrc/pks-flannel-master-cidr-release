@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-sed -i "s/\"Network\":.*,/\"Network\":\"<% p("pod-network-cidr")%>\",/" /var/vcap/jobs/flanneld/bin/flanneld_ctl
+sed -i "s/\"Network\":.*,/\"Network\":\"<%= p("pod-network-cidr") %>\",/" /var/vcap/jobs/flanneld/bin/flanneld_ctl

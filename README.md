@@ -23,7 +23,8 @@ bosh create-release --force
 bosh upload-release ./dev_releases/pks-flannel-master-cidr/pks-flannel-master-cidr-0+dev.1.yml
 
 ```
-4. Configure the addon from this repo
+4. Modify `addon.yml` to change your desired Pod CIDR.  the default is 10.244.0.0/16 in this release, which is different from PKS' default to verify it worked.
+5. Configure the addon from this repo
 ```
 bosh -n update-config --name=pks-flannel-cidr --type=runtime ./addon.yml
 ```

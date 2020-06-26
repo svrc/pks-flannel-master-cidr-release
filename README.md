@@ -28,7 +28,7 @@ bosh upload-release ./dev_releases/pks-flannel-master-cidr/pks-flannel-master-ci
 ```
 bosh -n update-config --name=pks-flannel-cidr --type=runtime ./addon.yml
 ```
-6. Update your PKS clusters via the PKS CLI and/or Ops Manager "Apply Pending Changes" button with the PKS upgrade errand enabled.  This addon will automatically be installed on all worker nodes with the default manifest `pks-dpw-manifest.yml`
+6. Update your PKS clusters via the PKS CLI and/or Ops Manager "Apply Pending Changes" button with the PKS upgrade errand enabled.  This addon will automatically be installed on all worker nodes with the default manifest `addon.yml`
 
 
 

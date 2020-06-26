@@ -15,6 +15,7 @@ addons:
       jobs:
       - name: kube-controller-manager
         release: kubo
-
+#       properties:
+#         pod-network-cidr: 10.244.0.0/16
       stemcell:
       - os: ubuntu-xenial

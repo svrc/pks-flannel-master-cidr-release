@@ -1,8 +1,8 @@
-# PKS Flannel CIDR override
+# Tanzu Kubernetes Grid Integrated (TKGI) / PKS  Flannel CIDR override
 
 ## What does this do?
 
-PKS has a bug (June 2020) where the master node Pod Network CIDR is always 10.200/16.  If you override this in the PKS tile and need to use features like Admission Controller webhooks, you'll see the master node call the Pod from a 10.200.x.x source IP address.  This might violate security policies, etc.
+TKGI/PKS has a bug (June 2020) where the master node Pod Network CIDR is always 10.200/16.  If you override this in the PKS tile and need to use features like Admission Controller webhooks, you'll see the master node call the Pod from a 10.200.x.x source IP address.  This might violate security policies, etc.
 
 This addon will force the PKS install's Pod CIDR to be set correctly on the master node.
 

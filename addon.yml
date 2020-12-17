@@ -10,12 +10,12 @@ addons:
     jobs:
     - name: flannel-cidr-override
       release: pks-flannel-master-cidr
-
+#     properties:
+#       pod-network-cidr: 10.244.0.0/16
     include: 
       jobs:
       - name: kube-controller-manager
         release: kubo
-#       properties:
-#         pod-network-cidr: 10.244.0.0/16
+
       stemcell:
       - os: ubuntu-xenial
